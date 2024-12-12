@@ -2,7 +2,6 @@
 
 This repository contains automated tests using the Playwright framework. The project follows the Page Object Model (POM) design pattern to organize test code and improve reusability. It includes implementations for login functionality, publication filtering, and search features.
 
-## 📂 Project Structure
 
 ### Key Components
 
@@ -21,8 +20,8 @@ This repository contains automated tests using the Playwright framework. The pro
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/your-repo.git
-   cd your-repo
+   git clone [https://github.com/your-username/your-repo.git](https://github.com/devmaniac1/wiley-assessment.git)
+   cd wiley-assessment
 
 2. Install dependencies:
    ```bash
@@ -49,4 +48,39 @@ Running Tests
    npx playwright show-report
 
 
+## 📝 Page Object Overview
 
+### FilterPage
+
+The FilterPage class provides methods to apply publication filters.
+
+async applyPublicationFilters(publicationFilter: string, exactKeyword: boolean)
+
+Parameters:
+ - publicationFilter: The type of publication filter to apply (e.g., "Books", "Journals").
+ - exactKeyword: A boolean indicating whether to match exact keywords.
+
+### LoginPage
+
+The LoginPage class automates the login process.
+
+async performLogin(email: string, password: string)
+
+Parameters:
+ - email: User's email address.
+ - password: User's password.
+
+It verifies login success by asserting the URL of the dashboard.
+
+
+### SearchPage
+
+The SearchPage class provides methods for two types of search functionality:
+
+Citation Search
+async performCitationSearch(searchString: string)
+Performs a search in the "Citation Search" tab using the provided input.
+
+Advanced Search
+async performAdvancedSearch(searchString: string)
+Executes an advanced search using the provided input.
