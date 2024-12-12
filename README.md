@@ -71,8 +71,8 @@ async performLogin(email: string, password: string)
 ```
 
 Parameters:
- - email: User's email address.
- - password: User's password.
+ - email: User's email address. (Your Own Email Required for this test)
+ - password: User's password. (Your Own Password Required for this test)
 
 It verifies login success by asserting the URL of the dashboard.
 
