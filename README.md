@@ -54,7 +54,9 @@ Running Tests
 
 The FilterPage class provides methods to apply publication filters.
 
+```ts
 async applyPublicationFilters(publicationFilter: string, exactKeyword: boolean)
+```
 
 Parameters:
  - publicationFilter: The type of publication filter to apply (e.g., "Books", "Journals").
@@ -64,7 +66,9 @@ Parameters:
 
 The LoginPage class automates the login process.
 
+```ts
 async performLogin(email: string, password: string)
+```
 
 Parameters:
  - email: User's email address.
@@ -78,9 +82,16 @@ It verifies login success by asserting the URL of the dashboard.
 The SearchPage class provides methods for two types of search functionality:
 
 Citation Search
+
+```ts
 async performCitationSearch(searchString: string)
+```
 Performs a search in the "Citation Search" tab using the provided input.
 
 Advanced Search
+
+```ts
 async performAdvancedSearch(searchString: string)
+```
+
 Executes an advanced search using the provided input.
